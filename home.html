@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="image/payoo.png" type="image/x-icon">
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <!-- tailwind cdn -->
@@ -26,7 +27,8 @@
                     </div>
                 </div>
                 <div>
-                    <button class="h-[38px] w-[102px] border-1 border-gray-500 rounded-[10px] text-gray-500 "> <i
+                    <button id="log-out-btn"
+                        class=" h-[38px] w-[102px] border-1 border-gray-500 rounded-[10px] text-gray-500 "> <i
                             class="fa-solid fa-arrow-right-from-bracket rotate-180  text-gray-500 "></i> Log
                         Out</button>
                 </div>
@@ -39,38 +41,35 @@
             </div>
         </div>
         <!-- card -->
-        <div class="grid grid-cols-3 gap-[17px] max-w-lg mx-auto px-[20px]">
-            <div id="add-btn"
-                class="border-1 border-gray-500 rounded-xl p-[22px] hover:bg-[#0875f22a] hover:text-[#0874F2]  ">
+        <div class="grid grid-cols-3 gap-[17px] max-w-lg mx-auto px-[20px] ">
+            <div id="add-btn" class="border-2 form-btn border-gray-500 rounded-xl p-[22px]     ">
                 <img class="mx-auto" src="image/wallet1.png" alt="">
                 <p class="text-center">Add Money</p>
             </div>
-            <div id="cash-out-btn"
-                class="border-1 border-gray-500 rounded-xl p-[22px] hover:bg-[#0875f22a] hover:text-[#0874F2] ">
+            <div id="cash-out-btn" class="border-2 border-gray-500 rounded-xl p-[22px] form-btn   ">
                 <img class="mx-auto" src="image/send1.png" alt="">
                 <p class="text-center">Cashout</p>
             </div>
-            <div id="Transfer-Money-btn"
-                class="border-1 border-gray-500 rounded-xl  p-[22px] hover:bg-[#0875f22a] hover:text-[#0874F2]">
+            <div id="Transfer-Money-btn" class="border-2 border-gray-500 rounded-xl  p-[22px] form-btn w-[120px] ">
                 <img class="mx-auto" src="image/money1.png" alt="">
                 <p class="text-center">Transfer Money</p>
             </div>
-            <div id="get-bouns-btn" class="border-1 border-gray-500 rounded-xl  p-[22px] hover:bg-[#0875f22a] hover:text-[#0874F2]">
-                <img  class="mx-auto" src="image/bonus1.png" alt="">
+            <div id="get-bouns-btn" class="border-2 border-gray-500 form-btn rounded-xl  p-[22px]  ">
+                <img class="mx-auto" src="image/bonus1.png" alt="">
                 <p class="text-center">Get Bonus</p>
             </div>
-            <div id="pay-bil-btn" class="border-1 border-gray-500 rounded-xl  p-[22px] hover:bg-[#0875f22a] hover:text-[#0874F2]">
+            <div id="pay-bil-btn" class="border-2 border-gray-500 form-btn rounded-xl  p-[22px] ">
                 <img class="mx-auto" src="image/purse1.png" alt="">
                 <p class="text-center">Pay Bill</p>
             </div>
-            <div class="border-1 border-gray-500 rounded-xl p-[22px] hover:bg-[#0875f22a] hover:text-[#0874F2] ">
+            <div id="Transaction-btn" class="border-2  border-gray-500 rounded-xl p-[22px] form-btn w-[120px] ">
                 <img class="mx-auto" src="image/transaction1.png" alt="">
-                <p class="text-center">Transaction</p>
+                <p class="text-center  ">Transaction</p>
             </div>
         </div>
     </div>
     <!-- add money -->
-    <div id="add-money-parent" class="mx-auto max-w-lg px-[20px]">
+    <div id="add-money-parent" class="mx-auto max-w-lg px-[20px] form ">
         <div>
             <p class="font-semibold text-[18px] my-[20px]">Add Money</p>
         </div>
@@ -99,7 +98,7 @@
     </div>
     <!-- cash out section -->
     <div>
-        <div class="mx-auto max-w-lg px-[20px] none hidden" id="cash-out-parent">
+        <div class="mx-auto max-w-lg px-[20px] none hidden form" id="cash-out-parent">
             <div>
                 <p class="font-semibold text-[18px] my-[20px]">Cash Out</p>
             </div>
@@ -124,7 +123,7 @@
     </div>
     <!-- transfer money section -->
     <div>
-        <div class="mx-auto max-w-lg px-[20px] hidden" id="Transfer-Money-parent">
+        <div class="mx-auto max-w-lg px-[20px] hidden form" id="Transfer-Money-parent">
             <div>
                 <p class="font-semibold text-[18px] my-[20px]">Transfer Money</p>
             </div>
@@ -149,7 +148,7 @@
     </div>
     <!-- get bouns section -->
     <div>
-        <div class="mx-auto max-w-lg px-[20px] hidden " id="get-bouns-parent">
+        <div class="mx-auto max-w-lg px-[20px] hidden form" id="get-bouns-parent">
             <div>
                 <p class="font-semibold text-[18px] my-[20px]">Get Bonus</p>
             </div>
@@ -166,9 +165,9 @@
 
             </div>
         </div>
-    </div> 
+    </div>
     <!-- pay bil section -->
-     <div id="pay-bil-parent" class="mx-auto max-w-lg px-[20px] hidden">
+    <div id="pay-bil-parent" class="mx-auto max-w-lg px-[20px] hidden form">
         <div>
             <p class="font-semibold text-[18px] my-[20px]">Pay Bill</p>
         </div>
@@ -193,6 +192,13 @@
             </form>
             <button class="btn bg-[#0874F2] w-full text-white  rounded-3xl mt-2 " id="add-money-btn">Pay Now</button>
 
+        </div>
+    </div>
+    <!-- Transaction section -->
+    <div id="Transaction-container" class="form ">
+        <div class=" flex justify-between">
+            <p class="font-semibold text-[18px]">Transaction History</p>
+            <p class="font-semibold text-[14px] text-gray-500">View All</p>
         </div>
     </div>
     <script src="home.js"></script>

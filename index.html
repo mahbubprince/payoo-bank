@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="image/payoo.png" type="image/x-icon">
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <!-- tailwind cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
 <body class="flex justify-center items-center h-[100vh] bg-[#F4F5F7]">
     <form>
         <div class=" bg-cover bg-[url(image/bg.png)] h-[130px] w-[300px] items-center flex justify-center order-1">
@@ -18,17 +18,16 @@
         </div>
         <div class="rounded-xl p-9 bg-white ">
             <div class="mt-2">
-                <label class="font-bold"  for="">Mobile Number</label> <br>
+                <label class="font-bold" for="">Mobile Number</label> <br>
                 <input id="mobile-number" type="text" placeholder="Enter your number"
                     class="rounded-3xl bg-[#F4F5F7] pl-5 mt-2 w-full h-[40px]">
             </div>
             <div class="mt-4">
-                <label class="font-bold"  for="">4 Digit Pin</label> <br>
+                <label class="font-bold" for="">4 Digit Pin</label> <br>
                 <input id="pin-number" type="text" placeholder="Enter 4 Digit Pin"
                     class="rounded-3xl bg-[#F4F5F7] pl-5 mt-2 w-full h-[40px]">
             </div>
             <button class="btn bg-[#0874F2] w-full text-white  rounded-3xl mt-2 " id="login-btn">Login</button>
-
         </div>
     </form>
     <script src="login.js"></script>
